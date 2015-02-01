@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 layout: nil
+=======
+layout: null
+>>>>>>> b8369a73ceae38c539b4f68c09af696f5584c9ab
 ---
 
 <?xml version="1.0" encoding="utf-8"?>

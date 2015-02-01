@@ -14,8 +14,9 @@ baseurl:          '/'
 paginate:         5
 
 author:
-  name:           'lykmapipo'
+  name:           lykmapipo
   url:            http://lykmapipo.github.io/
+  email:		  lallyelias87@gmail.com
 
 # Custom vars
 version:          1.0.0
