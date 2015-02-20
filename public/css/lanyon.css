@@ -168,6 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sidebar-item {
   padding: 1rem;
+  overflow: hidden;
 }
 .sidebar-item p:last-child {
   margin-bottom: 0;
@@ -175,24 +176,25 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sidebar nav */
 .sidebar-nav {
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  /*border-bottom: 1px solid rgba(255,255,255,.1);*/
 }
 .sidebar-nav-item {
   display: block;
   padding: .5rem 1rem;
-  border-top: 1px solid rgba(255,255,255,.1);
+  /*border-top: 1px solid rgba(255,255,255,.1);*/
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: rgba(255,255,255,.1);
+  /*background-color: rgba(255,255,255,.1);*/
   border-color: transparent;
 }
 
 @media (min-width: 48em) {
   .sidebar-item {
     padding: 1.5rem;
+    overflow: hidden;
   }
   .sidebar-nav-item {
     padding-left:  1.5rem;

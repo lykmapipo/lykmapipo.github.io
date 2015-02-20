@@ -1,0 +1,79 @@
+/**
+ *  Rounded avatars
+ *  source: http://jsfiddle.net/spliter/p6GS8/ 
+*/
+
+.avatar {
+    float: left;
+    margin-top: 1em;
+    margin-right: 1em;
+    position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
+}
+/**
+ * Horizontal social icons
+ * source http://codepen.io/betdream/pen/godys
+ */
+
+.universal-inline-block {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.social-icons {
+    text-align: center;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 1.5em;
+    /*color: #448aaf;*/
+}
+.social-icons h1 {
+    margin: 40px 0;
+}
+.social-icons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.social-icons ul li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+.social-icons ul li a {
+    display: block;
+    font-size: 1.4em;
+    
+    margin: 0 5px;
+    text-decoration: none;
+}
+.social-icons ul li a i {
+    /*color: #448aaf;*/
+    
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.social-icons ul li a:hover i {
+    /*color: #275066;*/
+}
+.social-icons ul li a:focus i, .social-icons ul li a:active i {
+    transition: none;
+    /*color: #0b161c;*/
+}
+/**
+ * write reserved rights
+ */
+
+.writer-rights {
+    bottom: 0;
+    position: fixed;
+}

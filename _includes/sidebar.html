@@ -5,34 +5,24 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>{{ site.description }}</p>
+    <a href="/">
+      <img src="https://avatars0.githubusercontent.com/u/1610857?v=3&amp;s=460" class="avatar" alt="">
+    </a>
   </div>
 
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
-
-    {% comment %}
-      The code below dynamically generates a sidebar nav of pages with
-      `layout: page` in the front-matter. See readme for usage.
-    {% endcomment %}
-
-    {% assign pages_list = site.pages | sort:"url" %}
-    {% for node in pages_list %}
-      {% if node.title != null %}
-        {% if node.layout == "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
-  </nav>
-
   <div class="sidebar-item">
+    <div class="social-icons">
+      <ul>
+        <li><a href="https://github.com/lykmapipo" target="_blank" alt="github profile" title="github profile"><i class="fa fa-github-square"></i></a></li>
+        <li><a href="https://twitter.com/lallyelias" target="_blank" alt="twitter profile" title="twitter profile"><i class="fa fa fa-twitter-square"></i></a></li>
+        <li><a href="https://angel.co/lally-elias" target="_blank" alt="angel profile" title="angel profile"><i class="fa fa-angellist"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- <div class="sidebar-item">
     <p>
       &copy; {{ site.time | date: '%Y' }}. All rights reserved.
     </p>
-  </div>
+  </div> -->
 </div>
