@@ -5,4 +5,4 @@ collection: articles
 template: post.html
 ---
 
-A really short, rushed-feeling string of words.
+A really short, rushed-feeling string of words...
