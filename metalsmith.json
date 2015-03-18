@@ -1,0 +1,30 @@
+{
+    "source": "./_posts",
+    "destination": "./_site",
+    "metadata": {
+        "title": "lykmapipo",
+        "description": "A personal way of sharing what I know, gather and learnt from others"
+    },
+    "plugins": {
+        "metalsmith-ignore": [
+            "_drafts/*",
+            "_posts/index.md"
+        ],
+        "metalsmith-drafts": {},
+        "metalsmith-markdown": {},
+        "metalsmith-permalinks": {
+            "pattern": ":title"
+        },
+        "metalsmith-collections": {
+            "articles": {
+                "pattern": "*.md",
+                "sortBy": "date",
+                "reverse": true
+            }
+        },
+        "metalsmith-templates": {
+            "engine": "handlebars",
+            "directory": "_layouts"
+        }
+    }
+}

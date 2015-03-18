@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>lykmapipo | {{ title }}</title>
+</head>
+<body>
+
+  <h2>Blog Posts</h2>
+
+  {{#if articles }}
+  {{#each articles }}
+    <h2><a href="{{ path }}/index.html">{{ title }}</a></h2>
+    <time>{{ date }}</time>
+  {{/each}}
+  {{/if}}
+
+</body>
+</html>

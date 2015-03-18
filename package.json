@@ -1,0 +1,26 @@
+{
+    "name": "lykmapipo-github-io",
+    "version": "0.1.0",
+    "description": "A personal way of sharing what I know, gather and learnt from others",
+    "author": {
+        "name": "lykmapipo",
+        "url": "https://github.com/lykmapipo"
+    },
+    "scripts": {
+        "metalsmith": "./node_modules/.bin/metalsmith"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lykmapipo/lykmapipo.github.io"
+    },
+    "dependencies": {
+        "metalsmith-ignore": "^0.1.2",
+        "metalsmith-drafts": "0.0.1",
+        "metalsmith-templates": "^0.5.2",
+        "handlebars": "^2.0.0-alpha.2",
+        "metalsmith-markdown": "^0.2.1",
+        "metalsmith-permalinks": "^0.4.0",
+        "metalsmith-collections": "^0.6.0",
+        "metalsmith": "^0.10.0"
+    }
+}
