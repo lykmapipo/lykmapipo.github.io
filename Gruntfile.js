@@ -10,12 +10,15 @@ module.exports = function(grunt) {
 
     //grunt tasks config
     grunt.initConfig({
+        //site configurations
         lykmapipo: {
             posts: '_posts',
+            layouts: '_layouts',
             site: 'public',
             drafts: '_drafts'
-        }
-        //metalsmith config
+        },
+
+        //metalsmith configurations
         metalsmith: {
             lykmapipo: {
                 options: {
@@ -31,23 +34,24 @@ module.exports = function(grunt) {
                         'metalsmith-drafts': {},
                         'metalsmith-markdown': {},
                         'metalsmith-permalinks': {
-                            'pattern': ':title'
+                            pattern: ':date/:collection/:title',
+                            date: 'YYYY/MM/DD'
                         },
                         'metalsmith-collections': {
-                            'articles': {
-                                'pattern': '*.md',
-                                'sortBy': 'date',
-                                'reverse': true
+                            articles: {
+                                pattern: '*.md',
+                                sortBy: 'date',
+                                reverse: true
                             }
                         },
                         'metalsmith-templates': {
-                            'engine': 'handlebars',
-                            'directory': '_layouts'
+                            engine: 'handlebars',
+                            directory: '_layouts'
                         }
                     }
                 },
-                src: '_posts',
-                dest: '_site'
+                src: '<%= lykmapipo.posts %>',
+                dest: '<%= lykmapipo.site %>'
             }
         },
 
@@ -79,8 +83,22 @@ module.exports = function(grunt) {
         //watch files for changes
         // Watches files for changes and runs tasks based on the changed files
         watch: {
+            bower: {
+                files: ['bower.json'],
+                // tasks: ['wiredep']
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                }
+            },
             _posts: {
                 files: ['<%= lykmapipo.posts %>/**/*'],
+                tasks: ['metalsmith:lykmapipo'],
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                }
+            },
+            _layouts: {
+                files: ['<%= lykmapipo.layouts %>/**/*'],
                 tasks: ['metalsmith:lykmapipo'],
                 options: {
                     livereload: '<%= connect.options.livereload %>'
@@ -122,7 +140,7 @@ module.exports = function(grunt) {
     grunt.registerTask('serve', 'Compile then start a connect web server', function(target) {
 
         grunt.task.run([
-            'clean:lykmapipo'
+            'clean:lykmapipo',
             'metalsmith:lykmapipo',
             'connect:livereload',
             'watch'
