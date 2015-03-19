@@ -2,6 +2,7 @@
 title: First Post
 date: 2013-08-20
 collection: articles
+tags: programming
 template: post.html
 ---
 

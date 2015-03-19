@@ -2,6 +2,7 @@
 title: First Post
 date: 2012-08-20
 collection: articles
+tags: nodejs
 template: post.html
 ---
 

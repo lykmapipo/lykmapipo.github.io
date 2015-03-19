@@ -14,8 +14,11 @@ module.exports = function(grunt) {
         lykmapipo: {
             posts: '_posts',
             layouts: '_layouts',
+            topics: 'topics',
+            partials: '_partials',
             site: 'public',
-            drafts: '_drafts'
+            drafts: '_drafts',
+            tmp: '.tmp'
         },
 
         //metalsmith configurations
@@ -47,11 +50,18 @@ module.exports = function(grunt) {
                         'metalsmith-templates': {
                             engine: 'handlebars',
                             directory: '_layouts'
+                        },
+                        'metalsmith-tags': {
+                            handle: 'tags', // yaml key for tag list in you pages
+                            path: '<%= lykmapipo.topics %>/:tag.html', // path for result pages
+                            template: '<%= lykmapipo.layouts %>/tag.html', // template to use for tag listing
+                            sortBy: 'date', // provide posts sorted by 'date' (optional)
+                            reverse: true // sort direction (optional)
                         }
                     }
                 },
                 src: '<%= lykmapipo.posts %>',
-                dest: '<%= lykmapipo.site %>'
+                dest: '<%= lykmapipo.tmp %>'
             }
         },
 
@@ -70,7 +80,7 @@ module.exports = function(grunt) {
                 },
                 middleware: function(connect) {
                     return [
-                        connect.static('<%= lykmapipo.site %>'),
+                        connect.static('.tmp'),
                         connect().use(
                             '/bower_components',
                             connect.static('./bower_components')
