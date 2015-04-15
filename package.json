@@ -1,20 +1,47 @@
 {
-  "name": "lykmapipo.github.io",
-  "version": "0.1.0",
-  "description": "A personal way of sharing what I know, gather and learn from others",
-  "author": {
-    "name": "lykmapipo",
-    "url": "https://github.com/lykmapipo"
-  },
-  "scripts": {
-    "start": "grunt serve"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lykmapipo/lykmapipo.github.io"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
-  }
+    "name": "lykmapipo-github-io",
+    "description": "A personal way of sharing what I know, gather and learn from others.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/lykmapipo/lykmapipo-github-io",
+    "author": {
+        "name": "lykmapipo",
+        "url": "http://github.com/lykmapipo/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/lykmapipo/lykmapipo.github.io.git"
+    },
+    "bugs": {
+        "url": "https://github.com/lykmapipo/lykmapipo.github.io/issues"
+    },
+    "engines": {
+        "node": ">=0.10"
+    },
+    "scripts": {
+        "test": "grunt assemble"
+    },
+    "devDependencies": {
+        "assemble": "^0.4.42",
+        "grunt": "^0.4.5",
+        "grunt-contrib-clean": "^0.6.0",
+        "grunt-contrib-connect": "^0.8.0",
+        "grunt-contrib-watch": "^0.6.1",
+        "grunt-contrib-copy": "^0.5.0",
+        "load-grunt-tasks": "^0.6.0",
+        "time-grunt": "^1.0.0",
+        "assemble-contrib-permalinks": "*",
+        "assemble-contrib-sitemap": "*"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/lykmapipo/lykmapipo.github.io/blob/master/LICENSE-MIT"
+    }],
+    "keywords": [
+        "assemble",
+        "templates",
+        "handlebars",
+        "site generator",
+        "site builder",
+        "grunt"
+    ]
 }
