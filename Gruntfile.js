@@ -80,6 +80,18 @@ module.exports = function(grunt) {
         },
 
         copy: {
+            jquery: {
+                expand: true,
+                cwd: 'bower_components/jquery/dist/',
+                src: 'jquery.js',
+                dest: '<%= config.dist %>/assets/js/'
+            },
+            jqueryNicescroll: {
+                expand: true,
+                cwd: 'bower_components/jquery.nicescroll/',
+                src: 'jquery.nicescroll.js',
+                dest: '<%= config.dist %>/assets/js/'
+            },
             bootstrap: {
                 expand: true,
                 cwd: 'bower_components/bootstrap/dist/',
